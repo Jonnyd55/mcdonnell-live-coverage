@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="http://media.hamptonroads.com/media/content/pilotonline/2014/08/mcdonnell/styles.css" rel="stylesheet" type="text/css">
+		<title>Test update widget</title>
+	</head>
+	<body>
+		<div id="ticker">
+		<h3>live coverage | Former Gov. McDonnell trial</h3>
+			<div id="mcd_tweets">
+			</div>
+			<div id="mcd_updates">			
+			</div>
+		</div>
+	
+	
+	</body>
+	
+	<!-- Handlebars template for coveritlive updates -->
+	<script id="ticker-list" type="text/x-handlebars-template">
+		<h5><a style="color: #900;" href="http://hamptonroads.com/2014/08/live-mcdonnell-corruption-trial" target="_blank"">Latest developments</a></h5>
+		<ul>
+			{{#each objects}}
+			<li>{{published}} <a href="http://hamptonroads.com/2014/08/live-mcdonnell-corruption-trial" target="_blank">{{headline}}</a> </li>
+			{{/each}}
+		</ul>
+	</script>
+	
+	<!-- Handlebars template for tweets -->
+	<script id="tweets" type="text/x-handlebars-template">
+		<p>Twitter updates from Pilot reporters</p>
+		<ul>
+			{{#each objects}}
+			<li><h5><a href="http://twitter.com/{{handle}}" target="_blank">{{name}}</a></h5>
+				<span style="color: #900; font-size: 11px;">{{time}}</span> <img src={{{image}}}> {{{status}}} 
+			</li>
+			{{/each}}
+		</ul>
+	</script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	
+</html>
