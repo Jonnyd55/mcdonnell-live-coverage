@@ -15,7 +15,7 @@ __The files:__
 
 The updates came from two place: a twitter feed (or list of twitter users) and a [CoveritLive][2] event. 
 
-I used [Requests][3] and the [CoveritLive API][4] to pull newsflashes from the event, which is where the rest of our coverage was being hosted. I also used [python-twittery][5] to do the twitter data processing.
+I used [Requests][3] and the [CoveritLive API][4] to pull newsflashes from the event, which is where the rest of our coverage was being hosted. I also used [python-twitter][5] to do the twitter data processing.
 
 The script was designed to be started up by online producers who wouldn't need to touch the code, though various aspects of it needed to change (like the CoverItLive event ID and the Twitter users). They just needed to answer a series of prompts in the command line once the script fired. Once it is fired, the prompts look like this:
 
